@@ -1,0 +1,36 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Collection Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Collection Assistant</h1>
+
+        <div class="controls">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" placeholder="Enter customer's full name">
+            <button id="startCallButton">Start Call Simulation</button>
+        </div>
+
+        <div class="conversation-area">
+            <h2>Conversation Log</h2>
+            <div id="conversationLog" class="log-box">
+                <!-- Conversation will appear here -->
+            </div>
+        </div>
+
+        <div class="recording-controls">
+            <button id="recordButton" disabled>Hold to Speak (or Click to Start/Stop)</button>
+            <p id="statusMessage">Enter customer name and start call.</p>
+        </div>
+         <audio id="botAudioPlayer" style="display: none;"></audio>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
